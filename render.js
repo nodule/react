@@ -18,7 +18,8 @@ module.exports = {
       },
       container: {
         title: "Container",
-        type: "DOMElement"
+        type: "DOMElement",
+        required: false
       }
     },
     output: {
@@ -40,8 +41,12 @@ module.exports = {
         function() {
           output({
             element: input.element,
-            container: input.container
           });
+          if (input.container) {
+            output({
+              container: input.container
+            });
+          }
         }
       );
     }.call(this);

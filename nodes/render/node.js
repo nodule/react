@@ -6,8 +6,10 @@ output = function() {
     function() {
       cb({
         element: input.element,
-        container: input.container
       });
+      if (input.container) {
+        cb({container: input.container});
+      }
     }
   );
 };

@@ -18,7 +18,8 @@
       },
       "container": {
         "title": "Container",
-        "type": "DOMElement"
+        "type": "DOMElement",
+        "required": false
       }
     },
     "output": {

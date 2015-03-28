@@ -19,7 +19,8 @@
           },
           "container": {
             "title": "Container",
-            "type": "DOMElement"
+            "type": "DOMElement",
+            "required": false
           }
         },
         "output": {
@@ -44,7 +45,7 @@
       "description": "Render a ReactElement into the DOM",
       "ns": "react",
       "name": "render",
-      "fn": "react.initializeTouchEvents(true); // bit of a hack\noutput = function() {\n  react.render(\n    input.element,\n    input.container,\n    function() {\n      cb({\n        element: input.element,\n        container: input.container\n      });\n    }\n  );\n};\n"
+      "fn": "react.initializeTouchEvents(true); // bit of a hack\noutput = function() {\n  react.render(\n    input.element,\n    input.container,\n    function() {\n      cb({\n        element: input.element,\n      });\n      if (input.container) {\n        cb({container: input.container});\n      }\n    }\n  );\n};\n"
     },
     {
       "ports": {
