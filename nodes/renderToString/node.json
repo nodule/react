@@ -1,0 +1,31 @@
+{
+  "name": "renderToString",
+  "ns": "react",
+  "description": "Render a ReactElement to its initial HTML",
+  "phrases": {
+    "active": "Rendering ReactElement to string"
+  },
+  "dependencies": {
+    "npm": {
+      "react": "latest"
+    }
+  },
+  "ports": {
+    "input": {
+      "element": {
+        "title": "React Element",
+        "type": "ReactElement"
+      }
+    },
+    "output": {
+      "element": {
+        "title": "React Element",
+        "type": "ReactElement"
+      },
+      "html": {
+        "title": "HTML",
+        "type": "string"
+      }
+    }
+  }
+}

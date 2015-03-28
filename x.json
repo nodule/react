@@ -1,0 +1,83 @@
+{
+  "name": "react",
+  "description": "React for Chiχ",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/react.git"
+  },
+  "dependencies": {
+    "react": "^0.13.1"
+  },
+  "nodes": [
+    {
+      "ports": {
+        "input": {
+          "element": {
+            "title": "React Element",
+            "type": "ReactElement"
+          },
+          "container": {
+            "title": "Container",
+            "type": "DOMElement"
+          }
+        },
+        "output": {
+          "element": {
+            "title": "React Element",
+            "type": "ReactElement"
+          },
+          "container": {
+            "title": "Container",
+            "type": "DOMElement"
+          }
+        }
+      },
+      "dependencies": {
+        "npm": {
+          "react": "latest"
+        }
+      },
+      "phrases": {
+        "active": "Rendering ReactElement"
+      },
+      "description": "Render a ReactElement into the DOM",
+      "ns": "react",
+      "name": "render",
+      "fn": "react.initializeTouchEvents(true); // bit of a hack\noutput = function() {\n  react.render(\n    input.element,\n    input.container,\n    function() {\n      cb({\n        element: input.element,\n        container: input.container\n      });\n    }\n  );\n};\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "element": {
+            "title": "React Element",
+            "type": "ReactElement"
+          }
+        },
+        "output": {
+          "element": {
+            "title": "React Element",
+            "type": "ReactElement"
+          },
+          "html": {
+            "title": "HTML",
+            "type": "string"
+          }
+        }
+      },
+      "dependencies": {
+        "npm": {
+          "react": "latest"
+        }
+      },
+      "phrases": {
+        "active": "Rendering ReactElement to string"
+      },
+      "description": "Render a ReactElement to its initial HTML",
+      "ns": "react",
+      "name": "renderToString",
+      "fn": "output.html = react.renderToString(input.element);\noutput.element = input.element;\n"
+    }
+  ],
+  "twigs": []
+}

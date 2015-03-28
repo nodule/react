@@ -1,0 +1,35 @@
+{
+  "name": "render",
+  "ns": "react",
+  "description": "Render a ReactElement into the DOM",
+  "phrases": {
+    "active": "Rendering ReactElement"
+  },
+  "dependencies": {
+    "npm": {
+      "react": "latest"
+    }
+  },
+  "ports": {
+    "input": {
+      "element": {
+        "title": "React Element",
+        "type": "ReactElement"
+      },
+      "container": {
+        "title": "Container",
+        "type": "DOMElement"
+      }
+    },
+    "output": {
+      "element": {
+        "title": "React Element",
+        "type": "ReactElement"
+      },
+      "container": {
+        "title": "Container",
+        "type": "DOMElement"
+      }
+    }
+  }
+}
