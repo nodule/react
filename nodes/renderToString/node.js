@@ -1,2 +1,2 @@
-output.html = react.renderToString(input.element);
-output.element = input.element;
+output.html = react.renderToString($.element);
+output.element = $.element;

@@ -1,14 +1,14 @@
 react.initializeTouchEvents(true); // bit of a hack
 output = function() {
   react.render(
-    input.element,
-    input.container,
+    $.element,
+    $.container,
     function() {
       cb({
-        element: input.element,
+        element: $.element,
       });
-      if (input.container) {
-        cb({container: input.container});
+      if ($.container) {
+        cb({container: $.container});
       }
     }
   );
