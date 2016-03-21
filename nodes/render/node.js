@@ -5,10 +5,10 @@ output = function() {
     $.container,
     function() {
       cb({
-        element: $.element,
+        element: $.get('element'),
       });
       if ($.container) {
-        cb({container: $.container});
+        cb({container: $.get('container')});
       }
     }
   );

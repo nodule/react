@@ -1,2 +1,2 @@
-output.html = react.renderToString($.element);
-output.element = $.element;
+output.html = $.create(react.renderToString($.element));
+output.element = $.get('element');
