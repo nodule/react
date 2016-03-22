@@ -33,18 +33,18 @@ module.exports = {
       }
     }
   },
-  fn: function render(input, output, state, done, cb, on, react) {
+  fn: function render(input, $, output, state, done, cb, on, react) {
     var r = function() {
       react.render(
-        input.element,
-        input.container,
+        $.element,
+        $.container,
         function() {
           output({
-            element: input.element,
+            element: $.get('element'),
           });
-          if (input.container) {
+          if ($.container) {
             output({
-              container: input.container
+              container: $.get('container')
             });
           }
         }

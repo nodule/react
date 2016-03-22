@@ -28,10 +28,10 @@ module.exports = {
       }
     }
   },
-  fn: function renderToString(input, output, state, done, cb, on, react) {
+  fn: function renderToString(input, $, output, state, done, cb, on, react) {
     var r = function() {
-      output.html = react.renderToString(input.element);
-      output.element = input.element;
+      output.html = $.create(react.renderToString($.element));
+      output.element = $.get('element');
     }.call(this);
     return {
       output: output,

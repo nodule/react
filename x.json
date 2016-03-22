@@ -45,7 +45,7 @@
       "description": "Render a ReactElement into the DOM",
       "ns": "react",
       "name": "render",
-      "fn": "react.initializeTouchEvents(true); // bit of a hack\noutput = function() {\n  react.render(\n    input.element,\n    input.container,\n    function() {\n      cb({\n        element: input.element,\n      });\n      if (input.container) {\n        cb({container: input.container});\n      }\n    }\n  );\n};\n"
+      "fn": "react.initializeTouchEvents(true); // bit of a hack\noutput = function() {\n  react.render(\n    $.element,\n    $.container,\n    function() {\n      cb({\n        element: $.get('element'),\n      });\n      if ($.container) {\n        cb({container: $.get('container')});\n      }\n    }\n  );\n};\n"
     },
     {
       "ports": {
@@ -77,7 +77,7 @@
       "description": "Render a ReactElement to its initial HTML",
       "ns": "react",
       "name": "renderToString",
-      "fn": "output.html = react.renderToString(input.element);\noutput.element = input.element;\n"
+      "fn": "output.html = $.create(react.renderToString($.element));\noutput.element = $.get('element');\n"
     }
   ],
   "twigs": []
