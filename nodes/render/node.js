@@ -1,6 +1,6 @@
-react.initializeTouchEvents(true); // bit of a hack
+// react.initializeTouchEvents(true); // bit of a hack
 output = function() {
-  react.render(
+  react_dom.render(
     $.element,
     $.container,
     function() {

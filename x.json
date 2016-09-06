@@ -7,15 +7,27 @@
     "url": "https://github.com/nodule/react.git"
   },
   "dependencies": {
-    "react": "^0.13.1"
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
   },
   "nodes": [
     {
+      "name": "render",
+      "ns": "react",
+      "description": "Render a ReactElement into the DOM",
+      "phrases": {
+        "active": "Rendering ReactElement"
+      },
+      "dependencies": {
+        "npm": {
+          "react-dom": "latest"
+        }
+      },
       "ports": {
         "input": {
           "element": {
             "title": "React Element",
-            "type": "ReactElement"
+            "type": "function"
           },
           "container": {
             "title": "Container",
@@ -34,20 +46,20 @@
           }
         }
       },
+      "fn": "// react.initializeTouchEvents(true); // bit of a hack\noutput = function() {\n  react_dom.render(\n    $.element,\n    $.container,\n    function() {\n      cb({\n        element: $.get('element'),\n      });\n      if ($.container) {\n        cb({container: $.get('container')});\n      }\n    }\n  );\n};\n"
+    },
+    {
+      "name": "renderToString",
+      "ns": "react",
+      "description": "Render a ReactElement to its initial HTML",
+      "phrases": {
+        "active": "Rendering ReactElement to string"
+      },
       "dependencies": {
         "npm": {
           "react": "latest"
         }
       },
-      "phrases": {
-        "active": "Rendering ReactElement"
-      },
-      "description": "Render a ReactElement into the DOM",
-      "ns": "react",
-      "name": "render",
-      "fn": "react.initializeTouchEvents(true); // bit of a hack\noutput = function() {\n  react.render(\n    $.element,\n    $.container,\n    function() {\n      cb({\n        element: $.get('element'),\n      });\n      if ($.container) {\n        cb({container: $.get('container')});\n      }\n    }\n  );\n};\n"
-    },
-    {
       "ports": {
         "input": {
           "element": {
@@ -66,19 +78,7 @@
           }
         }
       },
-      "dependencies": {
-        "npm": {
-          "react": "latest"
-        }
-      },
-      "phrases": {
-        "active": "Rendering ReactElement to string"
-      },
-      "description": "Render a ReactElement to its initial HTML",
-      "ns": "react",
-      "name": "renderToString",
       "fn": "output.html = $.create(react.renderToString($.element));\noutput.element = $.get('element');\n"
     }
-  ],
-  "twigs": []
+  ]
 }

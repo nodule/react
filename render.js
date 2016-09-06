@@ -7,14 +7,14 @@ module.exports = {
   },
   dependencies: {
     npm: {
-      react: require('react')
+      "react-dom": require('react-dom')
     }
   },
   ports: {
     input: {
       element: {
         title: "React Element",
-        type: "ReactElement"
+        type: "function"
       },
       container: {
         title: "Container",
@@ -33,9 +33,9 @@ module.exports = {
       }
     }
   },
-  fn: function render(input, $, output, state, done, cb, on, react) {
+  fn: function render(input, $, output, state, done, cb, on, react_dom) {
     var r = function() {
-      react.render(
+      react_dom.render(
         $.element,
         $.container,
         function() {

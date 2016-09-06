@@ -15,7 +15,8 @@
     "test": "chit -r"
   },
   "dependencies": {
-    "react": "^15.3.1"
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
   },
   "dependencyIdeas": {
     "react-bootstrap": "^0.19.1",
