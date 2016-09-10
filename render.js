@@ -18,7 +18,7 @@ module.exports = {
       },
       container: {
         title: "Container",
-        type: "DOMElement",
+        type: "HTMLElement",
         required: false
       }
     },
@@ -29,7 +29,7 @@ module.exports = {
       },
       container: {
         title: "Container",
-        type: "DOMElement"
+        type: "HTMLElement"
       }
     }
   },
