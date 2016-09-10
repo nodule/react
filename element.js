@@ -28,8 +28,8 @@ module.exports = {
       }
     },
     output: {
-      element: {
-        title: "React Element",
+      component: {
+        title: "React Component",
         type: "ReactElement"
       }
     }
@@ -43,7 +43,7 @@ module.exports = {
       );
 
       output({
-        element: $.create(element)
+        component: $.create(element)
       });
     }.call(this);
     return {

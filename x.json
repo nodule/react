@@ -41,13 +41,13 @@
           }
         },
         "output": {
-          "element": {
-            "title": "React Element",
+          "component": {
+            "title": "React Component",
             "type": "ReactElement"
           }
         }
       },
-      "fn": "output = function() {\n  var element = react.createElement(\n    $.tag,\n    $.props,\n    $.children\n  );\n\n  cb({\n    element: $.create(element)\n  });\n};\n"
+      "fn": "output = function() {\n  var element = react.createElement(\n    $.tag,\n    $.props,\n    $.children\n  );\n\n  cb({\n    component: $.create(element)\n  });\n};\n"
     },
     {
       "name": "render",

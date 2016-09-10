@@ -6,6 +6,6 @@ output = function() {
   );
 
   cb({
-    element: $.create(element)
+    component: $.create(element)
   });
 };

@@ -28,8 +28,8 @@
       }
     },
     "output": {
-      "element": {
-        "title": "React Element",
+      "component": {
+        "title": "React Component",
         "type": "ReactElement"
       }
     }
