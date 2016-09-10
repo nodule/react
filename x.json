@@ -12,6 +12,44 @@
   },
   "nodes": [
     {
+      "name": "element",
+      "ns": "react",
+      "description": "Create a ReactElement",
+      "phrases": {
+        "active": "Creating ReactElement {input.tag}"
+      },
+      "dependencies": {
+        "npm": {
+          "react": "latest"
+        }
+      },
+      "ports": {
+        "input": {
+          "tag": {
+            "title": "Tag",
+            "type": "string"
+          },
+          "props": {
+            "title": "Props",
+            "type": "object",
+            "default": {}
+          },
+          "children": {
+            "title": "Children",
+            "type": "array",
+            "required": false
+          }
+        },
+        "output": {
+          "element": {
+            "title": "React Element",
+            "type": "ReactElement"
+          }
+        }
+      },
+      "fn": "output = function() {\n  var element = react.createElement(\n    $.tag,\n    $.props,\n    $.children\n  );\n\n  cb({\n    element: $.create(element)\n  });\n};\n"
+    },
+    {
       "name": "render",
       "ns": "react",
       "description": "Render a ReactElement into the DOM",

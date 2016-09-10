@@ -1,0 +1,37 @@
+{
+  "name": "element",
+  "ns": "react",
+  "description": "Create a ReactElement",
+  "phrases": {
+    "active": "Creating ReactElement {input.tag}"
+  },
+  "dependencies": {
+    "npm": {
+      "react": "latest"
+    }
+  },
+  "ports": {
+    "input": {
+      "tag": {
+        "title": "Tag",
+        "type": "string"
+      },
+      "props": {
+        "title": "Props",
+        "type": "object",
+        "default": {}
+      },
+      "children": {
+        "title": "Children",
+        "type": "array",
+        "required": false
+      }
+    },
+    "output": {
+      "element": {
+        "title": "React Element",
+        "type": "ReactElement"
+      }
+    }
+  }
+}
